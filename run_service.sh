@@ -676,11 +676,6 @@ command -v docker >/dev/null 2>&1 ||
 }
 
 
-# Check if Docker is running
-if ! sudo systemctl status docker &> /dev/null; then
-    echo >&2 "Docker is not running!"
-    exit 1
-fi
 
 # Remove Docker containers
 docker rm -f abci0 node0 trader_abci_0 trader_tm_0 &> /dev/null
